@@ -38,9 +38,6 @@ function App() {
           <Route path="/Search">
             <Search />
           </Route>
-          <Route path="/Login">
-            <Login />
-          </Route>
 
         
         </Switch>
