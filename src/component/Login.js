@@ -1,10 +1,6 @@
 
 export default function Login() {
-
-
-    
     return (
-
         <div className="wrap">
           <div className="form-wrap">
               <div className="button-wrap">
