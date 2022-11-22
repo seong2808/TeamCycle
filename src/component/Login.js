@@ -1,32 +1,28 @@
 
 export default function Login() {
 
-  var x = document.getElementById("login");
-  var y = document.getElementById("register");
-  var z = document.getElementById("btn");
 
-  function login_fn(){
-    x.style.left = "50px";
-    y.style.left = "450px";
-    z.style.left = "0";
-  }
-  function register_fn(){
-    x.style.left = "-400px";
-    y.style.left = "50px";
-    z.style.left = "110px";
-  }
     
     return (
-
-
-    
 
         <div className="wrap">
           <div className="form-wrap">
               <div className="button-wrap">
                   <div id="btn"></div>
-                  <button type="button" className="togglebtn" onClick={login_fn}>LOG IN</button>
-                  <button type="button" className="togglebtn" onClick={register_fn}>REGISTER</button>
+                  <button type="button" className="togglebtn" onClick={
+                    function(){
+                      document.getElementById("login").style.left = "50px";
+                      document.getElementById("register").style.left = "450px";
+                      document.getElementById("btn").style.left = "0";
+                    }
+                  }>LOG IN</button>
+                  <button type="button" className="togglebtn" onClick={
+                    function(){
+                      document.getElementById("login").style.left = "-400px";
+                      document.getElementById("register").style.left = "50px";
+                      document.getElementById("btn").style.left = "110px";
+                    }
+                  }>REGISTER</button>
                   
               </div>
               <form id="login" action="" className="input-group">
