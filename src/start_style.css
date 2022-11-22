@@ -1,0 +1,251 @@
+/* 브라우저 마진과 패딩 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.con1_space {
+  height: 80px;
+  position: relative;
+  background-color: #404d75;
+}
+
+.con1 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0 4px black;
+  background: white;
+  align-items: center;
+  z-index: 5;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 70px;
+  padding-left: 15px;
+  float: left;
+}
+
+.menu {
+  width: 60%;
+  display: flex;
+  float: left;
+}
+
+.main_menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  float: right;
+}
+
+.main_menu a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #4f5e8e;
+  font-size: 18px;
+}
+
+.login{
+  width: 10%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #4f5e8e;
+  font-size: 18px;
+  float: right;
+  border: 0;
+  outline: 0;
+  background-color: white;
+}
+
+.more-btn {
+    display: none;
+  }
+
+.ride {
+  display: flex;
+}
+
+/* 공간잡아주기 */
+.con2 {
+  width: 100%;
+  height: 250px;
+   background: white;
+}
+.con3 {
+    width: 100%;
+    height: 200px;
+}
+.con4 {
+    width: 100%;
+    height: 200px;
+    background: antiquewhite;
+}
+.con5 {
+    width: 100%;
+    height: 200px;
+}
+
+.footer {
+    width: 100%;
+    height: 300px;
+    background: #4f5e8e;
+}
+
+.search_text {
+  padding-top: 50px;
+}
+
+.search_text h1 {
+  color: #404d75;
+}
+
+.location {
+  border: none;
+  background-color: transparent;
+  width: 40%;
+  display: flex;
+}
+
+.loca_icon {
+  padding-left: 10px;
+  width: 45px;
+}
+
+.area {
+  display: flex;
+  width: 35%;
+  height: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgba(23, 75, 125, 0.6);
+  font-size: 18px;
+  cursor: pointer;
+  padding-right: 10px;  
+  transform: translate(50%, 50%);
+  justify-content: center;
+  
+}
+
+.search_bor {
+  width: 780px;
+  margin: 25px auto 20px;
+  position: relative;
+  border: 3px solid rgb(36, 73, 123);
+  border-radius: 36px;
+  height: 72px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.search_space {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding-left: 15px;
+  
+}
+
+input:focus {
+  outline: none;
+  color: #4f5e8e;
+}
+
+input::placeholder {
+  color: #4f5e8e;
+}
+
+.divide_y {
+  height : 50px;
+  width: 2px;
+  background-color: rgb(36, 73, 123);
+}
+
+.search_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%) translateX(-30%);
+  right: 5px;
+  width: 38px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  margin-right: 10px; 
+}
+.search_button img {
+  width: 45px;
+}
+
+.content{
+  float:left;
+  width: 75%;
+}
+
+.Safe_Header {
+  padding: 15px;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+  .more-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .more-btn .icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    background: url(/public/menu-icon.png) no-repeat center;
+    background-size: contain;
+  }
+
+  .con1 {
+    background: white;
+  }
+
+  .main_menu {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background: white;
+  }
+
+  .main_menu a {
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+    padding: 12px;
+  }
+}
+
