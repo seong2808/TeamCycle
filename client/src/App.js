@@ -16,6 +16,7 @@ import Header from "./component/Header";
 import Search from "./component/Search";
 import Safety from "./component/Safety";
 import Policy from "./component/Policy";
+import Login from "./component/Login";
 
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route path="/Search">
             <Search />
+          </Route>
+          <Route path="/Login">
+            <Login />
           </Route>
           <Route path="/Policy">
             <Policy />
