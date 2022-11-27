@@ -17,7 +17,7 @@ export default function Header(props) {
             <div className="menu">
             <nav id="main_menu" className="main_menu">
                 <Link to="/Intro">소개 및 사용법</Link>
-                <Link to="/Ro">자전거 정책</Link>
+                <Link to="/Policy">자전거 정책</Link>
                 <Link to="/Safety">자전거 안전교육</Link>
                 <Link to="/Search">검색</Link>
             </nav>

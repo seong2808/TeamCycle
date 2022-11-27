@@ -15,6 +15,7 @@ import Intro from "./component/Intro";
 import Header from "./component/Header";
 import Search from "./component/Search";
 import Safety from "./component/Safety";
+import Policy from "./component/Policy";
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/Search">
             <Search />
+          </Route>
+          <Route path="/Policy">
+            <Policy />
           </Route>
 
         
