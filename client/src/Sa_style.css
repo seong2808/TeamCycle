@@ -1,0 +1,58 @@
+.Safety {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 20px;
+  background-image: linear-gradient(to top,#4f5e8e,white);
+}
+
+.safeT {
+  margin-left: 20px;
+  font-size: large;
+  color: #4F5E8E;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.safeN {
+  margin-left: 20px;
+  color: #4F5E8E;
+  text-align: left;
+  margin-bottom: 50px;
+  line-height: 50px;
+}
+
+.yout {
+width: 100%;
+height: 75%;
+}
+.yout {position:relative; padding-bottom:56.25%; padding-top:10px; height:0; overflow:hidden;}
+.yout iframe,
+.yout object,
+.yout embed {position:absolute; top:0; left:0; width:75%; height:75%;}
+
+.Policy {
+width: 100%;
+height: 2000px;
+display: block;
+padding-top: 50px;
+background-image: linear-gradient(to top,#4f5e8e,white);
+}
+
+.polT {
+margin-left: 20px;
+font-size: large;
+color: #4F5E8E;
+margin-bottom: 50px;
+text-align: left;
+}
+
+.polN {
+margin-left: 20px;
+font-size: large;
+font-style: bold;
+color: #4F5E8E;
+text-align: left;
+margin-bottom: 50px;
+line-height: 50px;
+}
