@@ -20,15 +20,17 @@ export default function Header(props) {
                 <Link to="/Policy">자전거 정책</Link>
                 <Link to="/Safety">자전거 안전교육</Link>
                 <Link to="/Search">검색</Link>
+                <Link to="/Login">로그인</Link>
+                
             </nav>
-                <button className="login" onClick={() => setModal(!modal)}>
+                {/* <button className="login" onClick={() => setModal(!modal)}>
                     로그인
                     {modal && (
                         <Modal closeModal={() => setModal(!modal)}>
                             <Login />
                         </Modal>
                     )}
-                </button>
+                </button> */}
             </div>
 
             <div className="more-btn">
