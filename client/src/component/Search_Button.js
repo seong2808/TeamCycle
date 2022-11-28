@@ -5,6 +5,16 @@ import Category from "./Category";
 export default function Search_Button(props) {
 
   let [modal, setModal] = useState(false);
+  const [text, setText] = useState("");
+
+  const textChangeHandler = (e) => {
+    setText(e.currentTarget.value);
+  }
+  
+  const submitText = () => {
+    props.propFunction(text)
+  }
+
 
   return (
       <div className="search_bor">
@@ -20,8 +30,8 @@ export default function Search_Button(props) {
             )}
           </button>
           <div className="divide_y"></div>
-          <input className="search_space" type="text" placeholder="자전거 도로 및 편의시설 검색" />
-          <button className="search_button">
+          <input className="search_space" type="text" placeholder="자전거 도로 및 편의시설 검색" onChange={textChangeHandler} />
+          <button className="search_button" onClick={submitText} >
             <img src="./search_icon.png"></img>
           </button>
       </div>
