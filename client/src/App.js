@@ -17,6 +17,7 @@ import Search from "./component/Search";
 import Safety from "./component/Safety";
 import Policy from "./component/Policy";
 import Login from "./component/Login";
+import Footer from "./component/Footer";
 
 
 function App() {
@@ -27,6 +28,14 @@ function App() {
   useEffect(()=>{
     callApi();
   }, []);
+
+
+
+
+  const _dbTest = async() => {
+    const res = await axios.get('/api/test');
+    console.log(res.data)
+  }
   
   return (
     <BrowserRouter>
@@ -58,7 +67,7 @@ function App() {
 
         
         </Switch>
-        <div className="footer">빈 공간</div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

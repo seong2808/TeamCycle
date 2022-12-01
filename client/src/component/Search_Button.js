@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import Category from "./Category";
 
+
 export default function Search_Button(props) {
 
   let [modal, setModal] = useState(false);
