@@ -30,8 +30,6 @@ function App() {
   }, []);
 
 
-
-
   const _dbTest = async() => {
     const res = await axios.get('/api/test');
     console.log(res.data)
