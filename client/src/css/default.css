@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+}
+
+/* Header css */
+img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.con1_space {
+  height: 80px;
+  position: relative;
+  background-color: #404d75;
+}
+
+.con1 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0 4px black;
+  background: white;
+  align-items: center;
+  z-index: 5;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  font-family: inherit;
+  word-break: inherit;
+  outline: none;
+}
+.con1 .logo-space {
+  display: flex;
+  height: 80px;
+  padding: 0px 35px;
+  -webkit-box-pack: start;
+  justify-content: space-between;
+  vertical-align: middle;
+  align-items: center;
+}
+.con1 .logo-space .link-space {
+  display: flex;
+  align-items: center;
+}
+.con1 .logo-space .link-space #logo {
+  width: 210px;
+  height: 70px;
+}
+.con1 .logo-space .link-space #slogan {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.6px;
+  color: rgb(23, 75, 125);
+  line-height: 1;
+  justify-content: center;
+  text-decoration-line: none;
+}
+.con1 .menu {
+  width: 60%;
+  display: flex;
+  float: left;
+}
+.con1 .menu .main_menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  float: right;
+}
+.con1 .menu .main_menu a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #4f5e8e;
+  font-size: 18px;
+}
+
+.login {
+  width: 10%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #4f5e8e;
+  font-size: 18px;
+  float: right;
+  border: 0;
+  outline: 0;
+  background-color: white;
+}
+
+.more-btn {
+  display: none;
+}
+
+/* Main1 */
+.main1 .ride {
+  display: flex;
+}
+.main1 .con2 {
+  width: 100%;
+  height: 250px;
+  background: white;
+}
+.main1 .con3 {
+  padding: 0 100px;
+}
+.main1 .con4 {
+  width: 100%;
+  height: 200px;
+  background: antiquewhite;
+}
+.main1 .con5 {
+  width: 100%;
+  height: 200px;
+}
+
+.search_text {
+  padding-top: 50px;
+}
+
+.search_text h1 {
+  color: #404d75;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 300px;
+  background: #4f5e8e;
+}/*# sourceMappingURL=default.css.map */
