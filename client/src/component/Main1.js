@@ -45,7 +45,7 @@ export default function Main1() {
   return (
     <div className="main1">
       <div className="ride">
-        <img src="./rideback.png" width="100%" height="100%" />
+        <img src="./mainimg03.jpg" width="100%" height="100%" />
       </div>
       <div className="con2">
         <div className="search_text">
