@@ -53,7 +53,8 @@ export default function Main1() {
         </div>
         <Search_Button />
       </div>
-      <div className="con3">
+      <div className="con3">빈공간</div>
+      <div className="con4">
         <Slider {...settings}>
           <div>
             <img src="./slide01.jpg"/> 
@@ -75,8 +76,6 @@ export default function Main1() {
           </div>
         </Slider> 
       </div>
-      
-      <div className="con4">빈 공간</div>
       <div className="con5">빈 공간</div>
     </div>
   );
