@@ -26,7 +26,7 @@ export default function Login() {
               <form id="login" action="" className="input-group">
                   <input type="text" className="input-field" placeholder="User name or Email" required/>                  
                   <input type="password" className="input-field" placeholder="Enter Password" required/>                    
-                  <input type="checkbox" className="checkbox"/><span>Remember Password</span>                    
+                  <input type="checkbox" className="checkbox"/><span id="checkboxspan">Remember Password</span>                    
                   <button className="submit">로그인</button>
               </form>
               <form id="register" action="" className="input-group">
@@ -35,7 +35,7 @@ export default function Login() {
                   <input type="password" className="input-field" placeholder="Enter Password" required />
                   <input type="password" className="input-field" placeholder="Enter Password Check" required />   
                   <input type="password" className="input-field" placeholder="Your E-mail" required />                  
-                  <input type="checkbox" className="checkbox"/><span>Terms and conditions</span>
+                  <input type="checkbox" className="checkbox"/><span id="checkboxspan">Terms and conditions</span>
                   <button className="submit">회원가입</button>
               </form>
           </div>

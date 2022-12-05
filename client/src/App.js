@@ -2,13 +2,14 @@ import axios from "axios";
 import { useEffect } from 'react';
 import React from "react";
 import "./App.css";
-import "./banner.css";
-import "./start_style.css";
-import "./Search.css";
-import "./Modal_style.css";
-import "./Category_style.css";
-import "./Sa_style.css";
-import "./Login_style.css";
+import "./css/banner.css";
+import "./css/Search.css";
+import "./css/Modal_style.css";
+import "./css/Category_style.css";
+import "./css/Sa_style.css";
+import "./css/Login_style.css";
+import "./css/default.css";
+import "./css/btn-search.css"
 import Main1 from "./component/Main1";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Intro from "./component/Intro";
@@ -17,6 +18,7 @@ import Search from "./component/Search";
 import Safety from "./component/Safety";
 import Policy from "./component/Policy";
 import Login from "./component/Login";
+import Footer from "./component/Footer";
 
 
 function App() {
@@ -27,6 +29,12 @@ function App() {
   useEffect(()=>{
     callApi();
   }, []);
+
+
+  const _dbTest = async() => {
+    const res = await axios.get('/api/test');
+    console.log(res.data)
+  }
   
   return (
     <BrowserRouter>
@@ -58,7 +66,7 @@ function App() {
 
         
         </Switch>
-        <div className="footer">빈 공간</div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

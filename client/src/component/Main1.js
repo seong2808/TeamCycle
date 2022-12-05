@@ -1,6 +1,47 @@
 import Search_Button from "./Search_Button";
+import React from "react";
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-export default function Main1() {
+const SampleNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block"}}
+      onClick={onClick}
+    />
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
+export default function Main1() { 
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    // 슬라이드 변경 시간
+    speed: 2000,
+    // 자동 재생 유지 시간
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
   return (
     <div className="main1">
       <div className="ride">
@@ -12,8 +53,29 @@ export default function Main1() {
         </div>
         <Search_Button />
       </div>
-
-      <div className="con3">빈 공간</div>
+      <div className="con3">
+        <Slider {...settings}>
+          <div>
+            <img src="./slide01.jpg"/> 
+          </div>
+          <div>
+            <img src="./slide02.jpg" />
+          </div>
+          <div>
+            <img src="./slide03.jpg" />
+          </div>
+          <div>
+            <img src="./slide04.jpg" />
+          </div>
+          <div>
+            <img src="./slide01.jpg" />
+          </div>
+          <div>
+            <img src="./slide02.jpg" />
+          </div>
+        </Slider> 
+      </div>
+      
       <div className="con4">빈 공간</div>
       <div className="con5">빈 공간</div>
     </div>
