@@ -62,4 +62,13 @@
 }
 .search_button img {
   width: 45px;
+}
+
+input:focus {
+  outline: none;
+  color: #4f5e8e;
+}
+
+input::placeholder {
+  color: #4f5e8e;
 }/*# sourceMappingURL=btn-search.css.map */

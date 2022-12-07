@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+ul, ol {
+    list-style: none;
+}
+
 /* Header css */
 img {
     transform: translateZ(0);
@@ -120,11 +124,175 @@ img {
     }
 
     .con3 {
-        padding:0 100px;
-        width: 100%;
-        height: 200px;
-        background: antiquewhite;
+        display: flex;
+        margin-top: 80px;
+        margin-bottom: 100px;
+        padding: 42px 40px;
+        border-radius: 30px;
+        box-shadow: rgb(76 103 140 / 15%) 25px 60px 70px 60px;
+        justify-content: space-around;
+        background: #EDF9FF;
+
+        h1 {color: #404d75;}
+        h4 {color: #4f5e8e;}
+
+        .bicyclepath {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .domestic_info {
+                width: 50%;
+                padding: 0 15px;
+                .domeinfo-tit {
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+
+                .dome_list {
+                    margin-left: -25px;
+
+                    .dome_item {
+                        float: left;
+                        width: 33.3%;
+                        padding-left: 15px;
+
+                         #dome_item_01, #dome_item_02, #dome_item_03 {
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            height: 250px;
+                            padding-top: 20px; 
+                            text-decoration: none;
+
+                            .cont {
+                                position: relative;
+                                z-index: 1;
+                                text-align: center;
+                                color: #fff;
+                                font-size: 20px;
+                                font-weight: 900;
+                                
+                                .iconbox {
+                                    display: block;
+                                    margin-bottom: 5px;
+
+                                    img {
+                                        width: 60%;
+                                        height: inherit;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                        #dome_item_01 {
+                            background: url(../../public/roadimg01.jpg) center center no-repeat;
+                            background-size: cover !important;                           
+                        }
+                        #dome_item_02 {
+                            background: url(../../public/roadimg02.jpg) center center no-repeat;
+                            background-size: cover !important;                           
+                        }
+                        #dome_item_03 {
+                            background: url(../../public/roadimg03.jpg) center center no-repeat;
+                            background-size: cover !important;                           
+                        }
+
+                    }
+                    a::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.35);
+                    }
+        
+                }
+            }
+            
+        }
+        
+
+
+        .domestic_certify {
+            width: 50%;
+            padding: 0 15px;
+
+            .certify-tit {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .certify_list {
+                margin-left: -25px;
+
+                .certify_item {
+                    float: left;
+                    width: 50%;
+                    padding-left: 45px;
+
+                     #certify_item_01, #certify_item_02 {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 250px;
+                        padding-top: 20px; 
+                        text-decoration: none;
+
+                        .cont {
+                            position: relative;
+                            z-index: 1;
+                            text-align: center;
+                            color: #fff;
+                            font-size: 30px;
+                            font-weight: 900;
+                            
+                            .iconbox {
+                                display: block;
+                                margin-bottom: 5px;
+
+                                img {
+                                    width: 60%;
+                                    height: inherit;
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                    #certify_item_01 {
+                        background: url(../../public/roadimg04.jpg) center center no-repeat;
+                        background-size: cover !important;                          
+                    }
+                    #certify_item_02 {
+                        background: url(../../public/roadimg05.jpg) center center no-repeat;
+                        background-size: cover !important;                           
+                    }
+
+                }
+                a::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.35);
+                }
+    
+            }
+            
+        }
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
     }
+    
     
     .con4 {
         padding:0 100px;
