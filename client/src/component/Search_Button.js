@@ -17,6 +17,12 @@ export default function Search_Button(props) {
   }
 
 
+  const onKeyPress = (e) => {
+    if(e.key == 'Enter') {
+      submitText();
+    }
+  }
+
   return (
       <div className="search_bor">
           <button className="location" onClick={() => setModal(!modal)}>
@@ -31,7 +37,7 @@ export default function Search_Button(props) {
             )}
           </button>
           <div className="divide_y"></div>
-          <input className="search_space" type="text" placeholder="자전거 도로 및 편의시설 검색" onChange={textChangeHandler} />
+          <input className="search_space" type="text" placeholder="자전거 도로 및 편의시설 검색" onChange={textChangeHandler} onKeyDown={onKeyPress}/>
           <button className="search_button" onClick={submitText} >
             <img src="./search_icon.png"></img>
           </button>
