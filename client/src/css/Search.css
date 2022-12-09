@@ -1,36 +1,32 @@
 .map_space {
-    width: 100%;
-    height: 2000px;
-    display: block;
-    background-image: linear-gradient(to top,#4f5e8e,white);
+  width: 100%;
+  height: 2000px;
+  display: block;
+  background-image: linear-gradient(to top, #4f5e8e, white);
 }
 
 .Kakaomap_road {
-    width: 80%;
-    height: 35%;
-    display: block;
-    margin: 0 auto;
+  width: 80%;
+  height: 35%;
+  display: block;
+  margin: 0 auto;
 }
 
 #myMap {
-    border-radius: 5%;
+  border-radius: 5%;
 }
 
 .map_info {
-    margin: 0 auto;
-    width: 50%;
-    height: 300px;
-    border: 3px;
-    padding-top: 5%;
+  margin: 0 auto;
+  width: 50%;
+  height: 300px;
+  border: 3px;
+  padding-top: 5%;
 }
 
 .map_info .info {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-radius: 10%;
-}
-
-
-
-
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10%;
+}/*# sourceMappingURL=Search.css.map */
