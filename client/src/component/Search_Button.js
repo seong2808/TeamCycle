@@ -22,7 +22,7 @@ export default function Search_Button(props) {
           <button className="location" onClick={() => setModal(!modal)}>
             <img className="loca_icon" src="./loca_icon.png"></img>
             <div className="area">                
-              <div className="loca_info"> 카테고리 </div>
+              <div className="loca_info">카카오</div>
             </div>
             {modal && (
               <Modal closeModal={() => setModal(!modal)}>
