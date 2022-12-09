@@ -20,6 +20,7 @@ import Safety from "./component/Safety";
 import Policy from "./component/Policy";
 import Login from "./component/Login";
 import Footer from "./component/Footer";
+import Bikesafe from "./component/Bikesafe";
 
 
 function App() {
@@ -63,6 +64,9 @@ function App() {
           </Route>
           <Route path="/Policy">
             <Policy />
+          </Route>
+          <Route path="/Bikesafe">
+            <Bikesafe />
           </Route>
 
         
