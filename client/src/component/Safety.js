@@ -4,7 +4,6 @@ export default function Safety() {
     <div className="Safety">
       <div className="safeT">
         <h1>자전거 이용 안전수칙 강의</h1>
-        
       </div>
       <div className="safeN">
         <h1>성인 자전거 안전 강의</h1>
