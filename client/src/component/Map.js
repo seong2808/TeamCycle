@@ -44,6 +44,7 @@ const Map = ({ searchPlace }) => {
     }, [searchPlace])
   
     return (
+      <>
        <div
           id="myMap"
           style={{
@@ -51,6 +52,10 @@ const Map = ({ searchPlace }) => {
             height: '100%',
           }}>
        </div>
+
+       
+
+       </>
     )
   }
   

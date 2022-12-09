@@ -10,6 +10,7 @@ import "./css/Sa_style.css";
 import "./css/Login_style.css";
 import "./css/default.css";
 import "./css/btn-search.css"
+import "./css/footer.css"
 import Main1 from "./component/Main1";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Intro from "./component/Intro";
