@@ -12,7 +12,8 @@ ul, ol {
 /* Header css */
 img {
   transform: translateZ(0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .con1_space {
@@ -40,7 +41,6 @@ img {
   display: flex;
   height: 80px;
   padding: 0px 35px;
-  -webkit-box-pack: start;
   justify-content: space-between;
   vertical-align: middle;
   align-items: center;
@@ -63,7 +63,8 @@ img {
   color: rgb(23, 75, 125);
   line-height: 1;
   justify-content: center;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 .con1 .menu {
   width: 60%;

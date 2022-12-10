@@ -6,7 +6,6 @@
   border-radius: 36px;
   height: 72px;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -24,7 +23,6 @@
   display: flex;
   width: 35%;
   height: 100%;
-  -webkit-box-align: center;
   align-items: center;
   color: rgba(23, 75, 125, 0.6);
   font-size: 18px;
@@ -66,6 +64,14 @@
 
 input:focus {
   outline: none;
+  color: #4f5e8e;
+}
+
+input::-moz-placeholder {
+  color: #4f5e8e;
+}
+
+input:-ms-input-placeholder {
   color: #4f5e8e;
 }
 
