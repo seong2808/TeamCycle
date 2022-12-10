@@ -1,33 +1,32 @@
 .bikesafe {
   width: 100vw;
 }
-
-.fs_sub_visual {
+.bikesafe .fs_sub_visual {
   background: url(../../public/sub_01.jpg) no-repeat center top;
   display: table;
   width: 100%;
   height: 300px;
   padding: 72px 70px 0 70px;
 }
-.fs_sub_visual h3 {
+.bikesafe .fs_sub_visual h3 {
   line-height: normal;
   font-size: 50px;
   font-family: "Noto Sans KR", sans-serif;
 }
-.fs_sub_visual .snb_vis_box {
+.bikesafe .fs_sub_visual .snb_vis_box {
   width: 100%;
   margin: 0 auto;
   text-align: center;
   color: #fff;
 }
-.fs_sub_visual .snb_vis_box .sta {
+.bikesafe .fs_sub_visual .snb_vis_box .sta {
   position: relative;
   margin-top: 10px;
   padding-top: 15px;
   font-size: 22px;
   opacity: 0.9;
 }
-.fs_sub_visual .snb_vis_box .sta::after {
+.bikesafe .fs_sub_visual .snb_vis_box .sta::after {
   content: "";
   position: absolute;
   left: 0;
@@ -38,17 +37,16 @@
   margin: 0 auto;
   background: #fff;
 }
-
-.fs_snb_box {
+.bikesafe .fs_snb_box {
   position: relative;
   float: left;
   width: 300px;
   margin-right: 70px;
 }
-.fs_snb_box .snb_menu {
+.bikesafe .fs_snb_box .snb_menu {
   position: relative;
 }
-.fs_snb_box .snb_menu .hide {
+.bikesafe .fs_snb_box .snb_menu .hide {
   overflow: hidden;
   position: absolute;
   left: -9999px;
@@ -57,11 +55,11 @@
   height: 0;
   font-size: 0;
 }
-.fs_snb_box .snb_menu .dep1 {
+.bikesafe .fs_snb_box .snb_menu .dep1 {
   position: relative;
   z-index: 2;
 }
-.fs_snb_box .snb_menu .dep1 a {
+.bikesafe .fs_snb_box .snb_menu .dep1 a {
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   display: block;
@@ -73,35 +71,32 @@
   border-bottom: 1px solid #cccccc;
   letter-spacing: -2px;
 }
-.fs_snb_box .snb_menu .dep1 a .deplink {
+.bikesafe .fs_snb_box .snb_menu .dep1 a .deplink {
   background: url(../../public/left_menu.png) right 20px center no-repeat;
 }
-.fs_snb_box h3 {
+.bikesafe .fs_snb_box h3 {
   display: block;
   font-size: 1.17em;
-  -webkit-margin-before: -1em;
-          margin-block-start: -1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-block-start: -1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   font-weight: bold;
 }
-.fs_snb_box .snb_title {
+.bikesafe .fs_snb_box .snb_title {
   height: 150px;
   background: #4375cc;
+  background: -moz-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
+  background: -webkit-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
   background: linear-gradient(to right, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
 }
-.fs_snb_box .snb_title h3 {
+.bikesafe .fs_snb_box .snb_title h3 {
   line-height: 150px;
   font-size: 30px;
   color: #fff;
   text-align: center;
 }
-
-.fs_content {
+.bikesafe .fs_content {
   margin: 0;
   padding: 0;
   border: 0;
@@ -115,12 +110,12 @@
   -webkit-text-size-adjust: 100%;
   letter-spacing: -1px;
 }
-.fs_content p {
+.bikesafe .fs_content p {
   width: 90%;
   font-size: 20px;
   line-height: 1.5;
 }
-.fs_content .con_header h3 {
+.bikesafe .fs_content .con_header h3 {
   text-align: left;
   font-size: 40px;
   font-weight: bold;
@@ -130,23 +125,20 @@
   border: 0;
   font-family: "Noto Sans KR", sans-serif;
 }
-.fs_content .con_body {
+.bikesafe .fs_content .con_body {
   padding: 70px 0;
   min-height: 400px;
   word-break: keep-all;
   text-align: left;
 }
-.fs_content .con_body .transmission img {
-  text-align: center;
-}
-.fs_content .mt60 {
+.bikesafe .fs_content .mt60 {
   margin-top: 60px;
 }
-.fs_content .text_photo div {
+.bikesafe .fs_content .text_photo div {
   float: left;
   width: 53%;
 }
-.fs_content .tith4 {
+.bikesafe .fs_content .tith4 {
   line-height: 44px;
   margin-bottom: 40px;
   padding-top: 25px;
@@ -155,22 +147,22 @@
   color: #333;
   background: url(../../public/tith4.png) no-repeat;
 }
-.fs_content .text_photo {
+.bikesafe .fs_content .text_photo {
   overflow: hidden;
 }
-.fs_content .tith5 {
+.bikesafe .fs_content .tith5 {
   margin-bottom: 15px;
   font-size: 25px;
   font-weight: 500;
   color: #222;
 }
-.fs_content .mt30 {
+.bikesafe .fs_content .mt30 {
   margin-top: 30px;
 }
-.fs_content .mt40 {
+.bikesafe .fs_content .mt40 {
   margin-top: 40px;
 }
-.fs_content .text_photo div {
+.bikesafe .fs_content .text_photo div {
   float: left;
   width: 53%;
 }/*# sourceMappingURL=bikesafestyle.css.map */

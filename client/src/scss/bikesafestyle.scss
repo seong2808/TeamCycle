@@ -1,197 +1,198 @@
 .bikesafe{
     width: 100vw;
-}
 
-// 헤더 밑 사진
-.fs_sub_visual {
-    background: url(../../public/sub_01.jpg) no-repeat center top;
-    display: table;
-    width: 100%;
-    height: 300px;
-    padding: 72px 70px 0 70px;
-
-    h3 {
-        line-height: normal;
-        font-size: 50px;
-        font-family: "Noto Sans KR", sans-serif;
-    }
-
-    .snb_vis_box {
+    // 헤더 밑 사진
+    .fs_sub_visual {
+        background: url(../../public/sub_01.jpg) no-repeat center top;
+        display: table;
         width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        color: #fff;   
-
-        .sta {
-            position: relative;
-            margin-top: 10px;
-            padding-top: 15px;
-            font-size: 22px;
-            opacity: 0.9;
-
-
-            &::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                width: 420px;
-                height: 1px;
-                margin: 0 auto;
-                background: #fff;
-            }
-        }
-    }
-}
-// 좌측메뉴 
-.fs_snb_box {
-    position: relative;
-    float: left;
-    width: 300px;
-    margin-right: 70px;
-
-    .snb_menu {
-        position: relative;
-
-        .hide {
-            overflow: hidden;
-            position: absolute;
-            left: -9999px;
-            top: 9999px;
-            width: 0;
-            height: 0;
-            font-size: 0;
-        }
-
-        .dep1 {
-            position: relative;
-            z-index: 2;
-
-            a {
-                transition: all 0.4s;
-                -webkit-transition: all 0.4s;
-                display: block;
-                line-height: normal;
-                padding: 20px 64px 20px 20px;
-                font-size: 20px;
-                text-decoration: none;
-                color: #222;
-                border-bottom: 1px solid #cccccc;
-                letter-spacing: -2px;
-
-                .deplink {
-                    background: url(../../public/left_menu.png) right 20px center no-repeat;
-                }
-            }
-            
-        }
-    }
-
-    h3 {
-        display: block;
-        font-size: 1.17em;
-        margin-block-start: -1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-    }
-
-    .snb_title {
-        height: 150px;
-        background: #4375cc;
-        background: -moz-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
-        background: -webkit-linear-gradient(left, #4375cc 0%,#20b9cb 100%,#2989d8 100%,#207cca 100%);
-        background: linear-gradient(to right, #4375cc 0%,#20b9cb 100%,#2989d8 100%,#207cca 100%);
+        height: 300px;
+        padding: 72px 70px 0 70px;
 
         h3 {
-            line-height: 150px;
-            font-size: 30px;
-            color: #fff;
+            line-height: normal;
+            font-size: 50px;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .snb_vis_box {
+            width: 100%;
+            margin: 0 auto;
             text-align: center;
+            color: #fff;   
+
+            .sta {
+                position: relative;
+                margin-top: 10px;
+                padding-top: 15px;
+                font-size: 22px;
+                opacity: 0.9;
+
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    width: 420px;
+                    height: 1px;
+                    margin: 0 auto;
+                    background: #fff;
+                }
+            }
         }
     }
-}
+    // 좌측메뉴 
+    .fs_snb_box {
+        position: relative;
+        float: left;
+        width: 300px;
+        margin-right: 70px;
 
-// 본문
-.fs_content {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: "Noto Sans KR", sans-serif;
-    overflow: hidden;
-    width: auto;
-    padding-top: 50px;
-    line-height: 27px;
-    font-size: 19px;
-    color: #616161;
-    -webkit-text-size-adjust: 100%;
-    letter-spacing: -1px;
+        .snb_menu {
+            position: relative;
 
-    p{ 
-        width: 90%;
-        font-size: 20px;
-        line-height: 1.5;
+            .hide {
+                overflow: hidden;
+                position: absolute;
+                left: -9999px;
+                top: 9999px;
+                width: 0;
+                height: 0;
+                font-size: 0;
+            }
 
+            .dep1 {
+                position: relative;
+                z-index: 2;
+
+                a {
+                    transition: all 0.4s;
+                    -webkit-transition: all 0.4s;
+                    display: block;
+                    line-height: normal;
+                    padding: 20px 64px 20px 20px;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: #222;
+                    border-bottom: 1px solid #cccccc;
+                    letter-spacing: -2px;
+
+                    .deplink {
+                        background: url(../../public/left_menu.png) right 20px center no-repeat;
+                    }
+                }
+                
+            }
+        }
+
+        h3 {
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: -1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .snb_title {
+            height: 150px;
+            background: #4375cc;
+            background: -moz-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
+            background: -webkit-linear-gradient(left, #4375cc 0%,#20b9cb 100%,#2989d8 100%,#207cca 100%);
+            background: linear-gradient(to right, #4375cc 0%,#20b9cb 100%,#2989d8 100%,#207cca 100%);
+
+            h3 {
+                line-height: 150px;
+                font-size: 30px;
+                color: #fff;
+                text-align: center;
+            }
+        }
     }
 
-    .con_header h3 {
-        text-align: left;
-        font-size: 40px;
-        font-weight: bold;
-        color: #444;
+    // 본문
+    .fs_content {
         margin: 0;
         padding: 0;
         border: 0;
-        font-family: "Noto Sans KR",sans-serif;
-    }
-
-    .con_body {
-        padding: 70px 0;
-        min-height: 400px;
-        word-break: keep-all;
-        text-align: left;
-    }
-
-    .mt60 {
-        margin-top: 60px;
-    }
-    .text_photo div {
-        float: left;
-        width: 53%;
-    }
-    .tith4 {
-        line-height: 44px;
-        margin-bottom: 40px;
-        padding-top: 25px;
-        font-size: 34px;
-        font-weight: bold;
-        color: #333;
-        background: url(../../public/tith4.png) no-repeat;
-    }
-
-    .text_photo {
+        font-family: "Noto Sans KR", sans-serif;
         overflow: hidden;
+        width: auto;
+        padding-top: 50px;
+        line-height: 27px;
+        font-size: 19px;
+        color: #616161;
+        -webkit-text-size-adjust: 100%;
+        letter-spacing: -1px;
+
+        p{ 
+            width: 90%;
+            font-size: 20px;
+            line-height: 1.5;
+
+        }
+
+        .con_header h3 {
+            text-align: left;
+            font-size: 40px;
+            font-weight: bold;
+            color: #444;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Noto Sans KR",sans-serif;
+        }
+
+        .con_body {
+            padding: 70px 0;
+            min-height: 400px;
+            word-break: keep-all;
+            text-align: left;
+        }
+
+        .mt60 {
+            margin-top: 60px;
+        }
+        .text_photo div {
+            float: left;
+            width: 53%;
+        }
+        .tith4 {
+            line-height: 44px;
+            margin-bottom: 40px;
+            padding-top: 25px;
+            font-size: 34px;
+            font-weight: bold;
+            color: #333;
+            background: url(../../public/tith4.png) no-repeat;
+        }
+
+        .text_photo {
+            overflow: hidden;
+        }
+
+        .tith5 {
+            margin-bottom: 15px;
+            font-size: 25px;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .mt30 {
+            margin-top: 30px;
+        }
+
+        .mt40 {
+            margin-top: 40px;
+        }
+
+        .text_photo div {
+            float: left;
+            width: 53%;
+        }
     }
 
-    .tith5 {
-        margin-bottom: 15px;
-        font-size: 25px;
-        font-weight: 500;
-        color: #222;
-    }
-
-    .mt30 {
-        margin-top: 30px;
-    }
-
-    .mt40 {
-        margin-top: 40px;
-    }
-
-    .text_photo div {
-        float: left;
-        width: 53%;
-    }
 }

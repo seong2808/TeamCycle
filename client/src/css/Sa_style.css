@@ -33,9 +33,8 @@ height: 75%;
 
 .sg_main {
 width: 100%;
-height: 2000px;
+height: 380vh;
 display: block;
-background-image: linear-gradient(to top,#E0FFFF,white);
 }
 
 .sg_title {
@@ -58,16 +57,26 @@ background-image: linear-gradient(to top,#E0FFFF,white);
   opacity: 80%;
 }
 
+.sg_title_image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+}
+
 .sg_title_text {
   position: absolute;
   font-size: 18pt;
   font-weight: lighter;
   font-family: "Noto Sans KR",sans-serif;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50% );
-    color: white;
-    z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  color: white;
+  z-index: 1;
 }
 
 .po_title_text {
@@ -82,14 +91,20 @@ background-image: linear-gradient(to top,#E0FFFF,white);
     z-index: 1;
 }
 
+.po_title_text h1, h3 {
+  color: white;
+}
+
+
+
 .sg_sub_memu {
   float: left;
   width: 20%;
 }
 
 .sg_body {
-  float: left;
-  width: 80%;
+  width: 100%;
+  padding-left: 20%;
 }
 
 .sg_sbt_text {
@@ -125,4 +140,66 @@ background-image: linear-gradient(to top,#E0FFFF,white);
   text-align: center;
   margin-top: 50px;
   color: #4F5E8E;
+}
+
+/* 좌측메뉴 */
+
+.sg_main .fs_snb_box1 {
+  position: relative;
+  float: left;
+  width: 300px;
+  margin-right: 70px;
+}
+.sg_main .fs_snb_box1 .snb_menu {
+  position: relative;
+}
+.sg_main .fs_snb_box1 .snb_menu .hide {
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  top: 9999px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+.sg_main .fs_snb_box1 .snb_menu .dep1 {
+  position: relative;
+  z-index: 2;
+}
+.sg_main .fs_snb_box1 .snb_menu .dep1 a {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  display: block;
+  line-height: normal;
+  padding: 20px 64px 20px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid #cccccc;
+  letter-spacing: -2px;
+}
+.sg_main .fs_snb_box1 .snb_menu .dep1 a .deplink {
+  background: url(../../public/left_menu.png) right 20px center no-repeat;
+}
+.sg_main .fs_snb_box1 h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: -1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.sg_main .fs_snb_box1 .snb_title {
+  height: 150px;
+  background: #4375cc;
+  background: -moz-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
+  background: -webkit-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
+  background: linear-gradient(to right, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
+}
+.sg_main .fs_snb_box1 .snb_title h3 {
+  line-height: 150px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
 }
