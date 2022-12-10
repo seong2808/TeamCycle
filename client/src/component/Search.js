@@ -26,9 +26,8 @@ export default function Search() {
         <div className="map_space">
           <div className="Kakaomap_road">
           <Mapcontainer
-            center={{ lat: 33.5563, lng: 126.79581 }}
-            style={{ width: "100%", height: "360px", zIndex: "10" }}
-            searchPlace={ Place }
+            style={{ width: "100%", height: "450px", zIndex: "10" }}
+            // searchPlace={ Place }
           >
           </Mapcontainer>
           </div>
