@@ -3,19 +3,18 @@
   height: 100%;
   display: block;
   padding-top: 20px;
-  background-color: white;
+  background-image: linear-gradient(to top,#4f5e8e,white);
 }
 
 .safeT {
-  text-align: left;
   margin-left: 20px;
   font-size: large;
   color: #4F5E8E;
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .safeN {
-  float: center;
   margin-left: 20px;
   color: #4F5E8E;
   text-align: left;
@@ -24,7 +23,6 @@
 }
 
 .yout {
-float: center;
 width: 100%;
 height: 75%;
 }
@@ -33,28 +31,98 @@ height: 75%;
 .yout object,
 .yout embed {position:absolute; top:0; left:0; width:75%; height:75%;}
 
-.Policy {
+.sg_main {
 width: 100%;
 height: 2000px;
 display: block;
-padding-top: 50px;
-background-image: linear-gradient(to top,#4f5e8e,white);
+background-image: linear-gradient(to top,#E0FFFF,white);
 }
 
-.polT {
-margin-left: 20px;
-font-size: large;
-color: #4F5E8E;
-margin-bottom: 50px;
-text-align: left;
+.sg_title {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 250px;
+  text-decoration: none;
 }
 
-.polN {
-margin-left: 20px;
-font-size: large;
-font-style: bold;
-color: #4F5E8E;
-text-align: left;
-margin-bottom: 50px;
-line-height: 50px;
+.image-test {
+  background-image: url(../../public/logo.png);
+  background-size: auto;
+}
+
+.sg_title_image {
+  width: 100%;
+  height: 250px;
+  vertical-align: middle;
+  opacity: 80%;
+}
+
+.sg_title_text {
+  position: absolute;
+  font-size: 18pt;
+  font-weight: lighter;
+  font-family: "Noto Sans KR",sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    color: white;
+    z-index: 1;
+}
+
+.po_title_text {
+  position: absolute;
+  font-size: 18pt;
+  font-weight: lighter;
+  font-family: "Noto Sans KR",sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    color: black;
+    z-index: 1;
+}
+
+.sg_sub_memu {
+  float: left;
+  width: 20%;
+}
+
+.sg_body {
+  float: left;
+  width: 80%;
+}
+
+.sg_sbt_text {
+  font-size: 24pt;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #4F5E8E;
+}
+
+.po_main_image1 {
+  margin-left: 30px;
+}
+
+.po_main_image2 {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.sg_main_image1 {
+  margin-top: 30px;
+}
+
+.sg_sub_image {
+  vertical-align: middle;
+}
+
+.sg_sub_list {
+  font-size: 14pt;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 50px;
+  color: #4F5E8E;
 }
