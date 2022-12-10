@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Search_Button from "./Search_Button";
-import Map from "./Map";
+import Mapcontainer from "./Mapcontainer";
 import Map_info from "./Map_info";
+
 
 
 export default function Search() {
@@ -24,13 +25,12 @@ export default function Search() {
         </div>
         <div className="map_space">
           <div className="Kakaomap_road">
-          <Map
+          <Mapcontainer
             center={{ lat: 33.5563, lng: 126.79581 }}
             style={{ width: "100%", height: "360px", zIndex: "10" }}
             searchPlace={ Place }
           >
-            
-          </Map>
+          </Mapcontainer>
           </div>
           <Map_info />
         </div>
