@@ -1,0 +1,7 @@
+{
+    "host" : "re-cycle.cxkdxk1jx9s9.ap-northeast-2.rds.amazonaws.com",
+    "port": "3306",
+    "user": "teamcycle",
+    "password" : "teamcycle00",
+    "database" : "recycle"
+}

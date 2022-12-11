@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:8080/",
   "name": "capstone",
   "version": "0.1.0",
   "private": true,
@@ -31,7 +32,6 @@
       "not dead",
       "not op_mini all"
     ],
-    "proxy": "http://localhost:3000/",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

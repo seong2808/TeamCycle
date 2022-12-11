@@ -22,15 +22,20 @@ import Policy from "./component/Policy";
 import Login from "./component/Login";
 import Footer from "./component/Footer";
 import Bikesafe from "./component/Bikesafe";
+import LoadInfo from "./component/LoadInfo";
+import LoadIntro from "./component/LoadIntro";
+import Loadcert from "./component/Loadcert";
 
 
 function App() {
-  const callApi = async()=>{
-    axios.get("/api").then((res)=>{console.log(res.data.test)});
+  const baseUrl = "http://localhost:8080"
+
+  const callbikeport = async()=>{
+    axios.get(baseUrl+'/api/bike_port').then(res => console.log(res))
   };
 
   useEffect(()=>{
-    callApi();
+    callbikeport();
   }, []);
 
 
@@ -69,7 +74,16 @@ function App() {
           <Route path="/Bikesafe">
             <Bikesafe />
           </Route>
-
+          <Route path="/LoadInfo">
+            <LoadInfo />
+          </Route>
+          <Route path="/LoadIntro">
+            <LoadIntro />
+          </Route>
+          <Route path="/Loadcert">
+            <Loadcert />
+          </Route>
+        
         
         </Switch>
         <Footer />
