@@ -86,8 +86,6 @@
 .bikesafe .fs_snb_box .snb_title {
   height: 150px;
   background: #4375cc;
-  background: -moz-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
-  background: -webkit-linear-gradient(left, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
   background: linear-gradient(to right, #4375cc 0%, #20b9cb 100%, #2989d8 100%, #207cca 100%);
 }
 .bikesafe .fs_snb_box .snb_title h3 {
@@ -131,11 +129,7 @@
   word-break: keep-all;
   text-align: left;
 }
-<<<<<<< HEAD
-.fs_content .mt60 {
-=======
 .bikesafe .fs_content .mt60 {
->>>>>>> 8ccbd4918cbffd947ce89b4073f8be640d61917b
   margin-top: 60px;
 }
 .bikesafe .fs_content .text_photo div {
