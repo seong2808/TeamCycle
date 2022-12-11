@@ -22,17 +22,15 @@
     }
 
     .area {
-        display: flex;
-        width: 35%;
+        width: 70%;
         height: 100%;
         -webkit-box-align: center;
         align-items: center;
         color: rgba(23, 75, 125, 0.6);
-        font-size: 18px;
+        font-size: 20px;
         cursor: pointer;
         padding-right: 10px;  
-        transform: translate(50%, 50%);
-        justify-content: center;
+        transform: translate(0%, 28%);
         
     }
 }

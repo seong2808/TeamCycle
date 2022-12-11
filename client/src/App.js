@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import React from "react";
 import "./App.css";
 import "./css/banner.css";
@@ -28,21 +28,59 @@ import Loadcert from "./component/Loadcert";
 
 
 function App() {
-  const baseUrl = "http://localhost:8080"
 
-  const callbikeport = async()=>{
-    axios.get(baseUrl+'/api/bike_port').then(res => console.log(res))
-  };
+  const [search, setSearch] = useState('');
+  const [port, setPort] = useState({
+    portname : "",
+		latitude : 37.5174,
+		longitude : 126.8653,
+		portnum : "",
+		port_type : "",
+		sunscreen : "",
+		airinjector : "",
+		manage_num : ""
+});
+
+  const getData = (search) => {
+    setSearch(search);
+  }
+
+  const compareData = () => {
+    // port.portname === search ? port.portnum
+
+  }
+
+  const callApi = async () => {
+    const response = await fetch('api/bike_port');
+    const body = await response.json();
+    return body;
+  }
 
   useEffect(()=>{
-    callbikeport();
-  }, []);
+    callApi()
+      .then(res => setPort(res))
+      .catch(err => console.log(err));
+  },[])
 
+  // const callbikeport = async()=>{
+  //   axios.get(baseUrl+'/api/bike_port').then(res => console.log(res))
+  // };
 
-  const _dbTest = async() => {
-    const res = await axios.get('/api/test');
-    console.log(res.data)
-  }
+  // useEffect(()=>{
+  //   awsTest()
+  //   // callbikeport();
+  // },[])
+  
+  // function awsTest(){
+  //   axios.get('/api/bike_port')
+  //   .then((response)=>{
+  //     console.log("awsTest",response);
+  //     })
+  //   .catch((error)=>{
+  //     console.log("error", error);
+  //   })
+  // }
+
   
   return (
     <BrowserRouter>
@@ -63,7 +101,9 @@ function App() {
             <Safety />
           </Route>
           <Route path="/Search">
-            <Search />
+            <Search getData={getData}
+                    // getport={port}
+            />
           </Route>
           <Route path="/Login">
             <Login />
@@ -83,6 +123,7 @@ function App() {
           <Route path="/Loadcert">
             <Loadcert />
           </Route>
+
         
         
         </Switch>

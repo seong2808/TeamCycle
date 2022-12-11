@@ -23,8 +23,13 @@ const connection = mysql.createConnection({
 });
 connection.connect();
 
+app.get('/api/test', (req,res) =>{
+  res.send( {test:'Server Response Success'} );
+})
+
 app.get('/api/bike_port', (req, res) => {
   connection.query(
+    
     "select * from bike_port",
     (err, data) => {
             if(!err) {
@@ -49,7 +54,7 @@ app.get('/api/bike_port', (req, res) => {
 //   })
 // })
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
+// app.get('/', function (req, res) {
+//     res.sendFile(path.join(__dirname, '../client/build/index.html'));
+//   });
 app.listen(PORT, () => console.log(`Server On : http://localhost:${PORT}/`));
