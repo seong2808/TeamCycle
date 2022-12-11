@@ -5,6 +5,14 @@ import Category from "./Category";
 
 export default function Search_Button(props) {
 
+  const [loca, setLoca] = useState('전체');
+
+  const getData = (loca) => {
+    setLoca(loca);
+
+  }
+
+
   let [modal, setModal] = useState(false);
   const [text, setText] = useState("");
 
@@ -28,11 +36,11 @@ export default function Search_Button(props) {
           <button className="location" onClick={() => setModal(!modal)}>
             <img className="loca_icon" src="./loca_icon.png"></img>
             <div className="area">                
-              <div className="loca_info">카카오</div>
+              <div className="loca_info">{loca}</div>
             </div>
             {modal && (
               <Modal closeModal={() => setModal(!modal)}>
-                <Category />
+                <Category getData={getData}/>
               </Modal>
             )}
           </button>

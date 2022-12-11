@@ -5,14 +5,29 @@ import Map_info from "./Map_info";
 
 
 
-export default function Search() {
+export default function Search({getData, getport}) {
 
-  const [InputText, setInputText] = useState('')
-  const [Place, setPlace] = useState('')
+  const [InputText, setInputText] = useState('');
+  const [Place, setPlace] = useState('');
+  const [searchCategory, setSearchCategory] = useState('');
+  const [portdata, setPortdata] = useState({
+    portname : "",
+		latitude : 37.5174,
+		longitude : 126.8653,
+		portnum : "",
+		port_type : "",
+		sunscreen : "",
+		airinjector : "",
+		manage_num : ""
+});
 
   const highFunction = (text) => {
     console.log(text);
     setPlace(text); 
+  }
+
+  const portFunc = () => {
+    setPortdata(getport)
   }
 
     return (
@@ -27,7 +42,8 @@ export default function Search() {
           <div className="Kakaomap_road">
           <Mapcontainer
             style={{ width: "100%", height: "450px", zIndex: "10" }}
-            // searchPlace={ Place }
+            searchPlace={ Place }
+            // portPlace={portdata}
           >
           </Mapcontainer>
           </div>

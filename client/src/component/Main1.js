@@ -158,7 +158,13 @@ export default function Main1() {
           </div>
         </Slider> 
       </div>
-      <div className="con5">빈 공간</div>
+      <div className="banner_box">
+        <div className="banner">
+          <h3>배너존</h3>
+          <div className="banner_list_wrap"></div>
+        </div>
+
+      </div>
     </div>
   );
 }
