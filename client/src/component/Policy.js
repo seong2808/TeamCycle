@@ -17,19 +17,19 @@ export default function Policy() {
 						
 						<div class="fs_snb_box1">
 							<div class="snb_title">
-								<h3>자전거 안전교육</h3>
+								<h3>자전거 정책</h3>
 							</div>
 							<nav class="snb_menu">
 							<h2 class="hide">좌측메뉴</h2>
 							<ul class="dep1">
 								<li class="">
-								<a target="_self" class="deplink"><span>교육자료</span></a> 
+								<a target="_self" class="deplink"><span>자전거 정책</span></a> 
 								</li>
 								<li class="">
 								<a target="_self" class="deplink"><span>자전거 안전 이용수칙</span></a>
 								</li>                      
 								<li>
-								<a target="_self" class="deplink"><span>교육일정</span></a>                        
+								<a target="_self" class="deplink"><span>자전거 안전교육</span></a>                        
 								</li>
 							</ul>
 							</nav>
