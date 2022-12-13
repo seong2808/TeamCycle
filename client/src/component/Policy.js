@@ -23,13 +23,13 @@ export default function Policy() {
 							<h2 class="hide">좌측메뉴</h2>
 							<ul class="dep1">
 								<li class="">
-								<a target="_self" class="deplink"><span>자전거 정책</span></a> 
+									<a target="_self" href="http://localhost:3000/Policy" class="deplink"><span>자전거 정책</span></a> 
 								</li>
 								<li class="">
-								<a target="_self" class="deplink"><span>자전거 안전 이용수칙</span></a>
+									<a target="_self" href="http://localhost:3000/Safety" class="deplink"><span>자전거 안전 이용수칙</span></a>
 								</li>                      
 								<li>
-								<a target="_self" class="deplink"><span>자전거 안전교육</span></a>                        
+									<a target="_self" href="http://localhost:3000/Bikesafe" class="deplink"><span>자전거 안전교육</span></a>                       
 								</li>
 							</ul>
 							</nav>

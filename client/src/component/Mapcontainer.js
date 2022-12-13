@@ -180,7 +180,7 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
                   alt="축소"
                 />
               </span>
-          </div>
+            </div>
         </div>
       <input
         type="checkbox"
