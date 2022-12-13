@@ -23,13 +23,14 @@ const connection = mysql.createConnection({
 });
 connection.connect();
 
+// 보관소
 app.get('/api/test', (req,res) =>{
   res.send( {test:'Server Response Success'} );
 })
 
 app.get('/api/bike_port', (req, res) => {
   connection.query(
-    
+
     "select * from bike_port",
     (err, data) => {
             if(!err) {
@@ -42,19 +43,20 @@ app.get('/api/bike_port', (req, res) => {
   })
 });
 
-// app.get('/api/bike_port', (req, res) => {
-//   db.query("select * from bike_port", (err, data) => {
-//       if(!err) {
-//           res.send(data);
+// 대여소  
+app.get('/api/bike_rental', (req, res) => {
+  connection.query(
+    
+    "select * from bike_rental",
+    (err, data) => {
+            if(!err) {
+                res.send(data);
+      
+            } else {
+                console.log(err);
+                res.send(err);
+            }
+  })
+});
 
-//       } else {
-//           console.log(err);
-//           res.send(err);
-//       }
-//   })
-// })
-
-// app.get('/', function (req, res) {
-//     res.sendFile(path.join(__dirname, '../client/build/index.html'));
-//   });
 app.listen(PORT, () => console.log(`Server On : http://localhost:${PORT}/`));
