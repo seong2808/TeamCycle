@@ -10,6 +10,26 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 5%;
+
+    .map_wrap {
+        margin-bottom: 5%;
+    }
+
+
+    .checkbox_con{
+        display: flex;
+        div{
+            width: 100%;
+            font-size: 20px;
+            padding-left: 9%;
+        }
+        justify-content: space-around;
+    }
+
+    input[type=checkbox] {
+        zoom: 10;
+        margin-left: 5%;
+    }
 }
 
 #myMap {

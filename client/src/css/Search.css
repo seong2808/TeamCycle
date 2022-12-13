@@ -10,6 +10,22 @@
   margin: 0 auto;
   margin-bottom: 5%;
 }
+.Kakaomap_road .map_wrap {
+  margin-bottom: 5%;
+}
+.Kakaomap_road .checkbox_con {
+  display: flex;
+  justify-content: space-around;
+}
+.Kakaomap_road .checkbox_con div {
+  width: 100%;
+  font-size: 20px;
+  padding-left: 9%;
+}
+.Kakaomap_road input[type=checkbox] {
+  zoom: 10;
+  margin-left: 5%;
+}
 
 #myMap {
   border-radius: 5%;
