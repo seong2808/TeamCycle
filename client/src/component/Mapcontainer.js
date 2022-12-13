@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Map, MapTypeId, MapMarker } from "react-kakao-maps-sdk";
+import { Map, MapTypeId, MapMarker, ZoomControl, MapTypeControl, Roadview, RoadviewMarker } from "react-kakao-maps-sdk";
 
 const Mapcontainer = ({ searchPlace, portPlace }) => {
 
@@ -12,6 +12,11 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
 
   const mapRef = useRef()
 
+  const [center, setCenter] = useState({
+    lat: 33.450422139819736,
+    lng: 126.5709139924533,
+  })
+
   const Handler = (target, type) => {
     if (target.checked) {
       return setMapTypeIds([...mapTypeIds, type])
@@ -23,31 +28,8 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
     )
   }
 
-  const setMapType = (maptype) => {
-    const map = mapRef.current
-    const roadmapControl = document.getElementById("btnRoadmap")
-    const skyviewControl = document.getElementById("btnSkyview")
-    if (maptype === "roadmap") {
-      map.setMapTypeId(window.kakao.maps.MapTypeId.ROADMAP)
-      roadmapControl.className = "selected_btn"
-      skyviewControl.className = "btn"
-    } else {
-      map.setMapTypeId(window.kakao.maps.MapTypeId.HYBRID)
-      skyviewControl.className = "selected_btn"
-      roadmapControl.className = "btn"
-    }
-  }
-
-  const zoomIn = () => {
-    const map = mapRef.current
-    map.setLevel(map.getLevel() - 1)
-  }
-  const zoomOut = () => {
-    const map = mapRef.current
-    map.setLevel(map.getLevel() + 1)
-  }
-
     useEffect(() => {
+    
       var infowindow = new window.kakao.maps.InfoWindow({})
       if (!map) return
       const ps = new window.kakao.maps.services.Places()
@@ -115,7 +97,6 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
 
   return (
     <>
-
       <div className={`map_wrap`}>
         <Map // 지도를 표시할 Container
           center={{
@@ -134,6 +115,9 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
           onCreate={setMap}
           ref={mapRef}
         >
+          <MapTypeControl position={window.kakao.maps.ControlPosition.TOPLEFT}/>
+          <ZoomControl position={window.kakao.maps.ControlPosition.TOPRIGHT}/>
+          
           {mapTypeIds.map(mapTypeId => <MapTypeId type={mapTypeId} />)}
           {markers.map((marker) => (
           <MapMarker
@@ -144,59 +128,41 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
             {info &&info.content === marker.content && (
               <div style={{color:"#000"}}>{marker.content}</div>
             )}
+
           </MapMarker>
         ))}
         </Map>
-        {/* 지도타입 컨트롤 div 입니다 */}
-        <div className="custom_typecontrol radius_border">
-              <span
-                id="btnRoadmap"
-                className="selected_btn"
-                onClick={() => setMapType("roadmap")}
-              >
-                지도
-              </span>
-              <span
-                id="btnSkyview"
-                className="btn"
-                onClick={() => {
-                  setMapType("skyview")
-                }}
-              >
-                스카이뷰
-              </span>
-            </div>
-            {/* 지도 확대, 축소 컨트롤 div 입니다 */}
-            <div className="custom_zoomcontrol radius_border">
-              <span onClick={zoomIn}>
-                <img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
-                  alt="확대"
-                />
-              </span>
-              <span onClick={zoomOut}>
-                <img
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
-                  alt="축소"
-                />
-              </span>
-            </div>
-        </div>
-      <input
+      </div>
+      <div className="checkbox_con">
+      <span>
+        <input
         type="checkbox"
         onChange={({ target }) => Handler(target, window.kakao.maps.MapTypeId.TERRAIN)}
       />
-      지형정보 보기
-      <input
+      <div>
+      지형정보
+      </div>
+      </span>
+      <span>
+        <input
         type="checkbox"
         onChange={({ target }) => Handler(target, window.kakao.maps.MapTypeId.BICYCLE)}
       />
-      자전거도로 보기
-      <input
+      <div>
+      자전거도로
+      </div>
+      </span>
+      <span>
+        <input
         type="checkbox"
         onChange={({ target }) => Handler(target, window.kakao.maps.MapTypeId.USE_DISTRICT)}
       />
-      지적편집도 보기
+      <div>
+      지적편집도
+      </div>
+      </span>
+      </div>
+
       
     </>
   )
