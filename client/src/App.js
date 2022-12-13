@@ -29,41 +29,76 @@ import Loadcert from "./component/Loadcert";
 
 
 function App() {
-  const portId = useRef(0);
   const [port, setPort] = useState([]);
+  const [rental, setRental] = useState([]);
   const [searchPort, setSearchPort] = useState([]);
+  const [searchRental, setSearchRental] = useState([]);
+  const [cate, setCate] = useState('전체');
+
+  const onCate = (text) => {
+    setCate(text)
+    console.log("cate:",cate)
+  }
 
   const getData = (search) => {
     console.log("getData:",search)
 
-    if(search !== "") {
-      portNameCompare(search);
+    // if(search !== "" || cate === '보관소 검색'){
+    //   portNameCompare(search);
+    // } else if (search !== "" || cate === '대여소 검색'){
+    //   rentalNameCompare(search);
+    // }
+
+      if(cate === '보관소 검색'){
+        portNameCompare(search);
+      } else if(cate === '대여소 검색'){
+        rentalNameCompare(search);
+      }
     }
-    
-  }
 
   const portNameCompare = (search) => {
-    const filtered = port.filter((itemList) => {
+    const filteredport = port.filter((itemList) => {
       return itemList.portname.includes(search)
     })
-    setSearchPort(filtered)
-    console.log("portNameCompare:",searchPort)
+    setSearchPort(filteredport)
+    console.log("searchPort:",searchPort)
+  }
+
+  const rentalNameCompare = (search) => {
+    const filteredrental = rental.filter((itemList) => {
+      return itemList.rental_name.includes(search)
+    })
+    setSearchRental(filteredrental)
+    console.log("searchRental:",searchRental)
   }
 
 
-  const callApi = async () => {
+  const callApiport = async () => {
     const response = await fetch('api/bike_port');
     const body = await response.json();
     return body;
   }
 
+  const callApirental = async () => {
+    const response = await fetch('api/bike_rental');
+    const body = await response.json();
+    return body;
+  }
+
   useEffect(()=>{
-    callApi()
-      .then(res => setPort(res))
-      .catch(err => console.log(err));
-    console.log(port)
+      callApiport()
+        .then(res => setPort(res))
+        .catch(err => console.log(err));
+      console.log("po",port)
+      callApirental()
+        .then(res => setRental(res))
+        .catch(err => console.log(err));
+      console.log("po",port)
+      console.log("re",rental)
   },[])
   
+  
+
   return (
     <BrowserRouter>
     
@@ -84,7 +119,18 @@ function App() {
           </Route>
           <Route path="/Search">
             <Search getData={getData}
-                    sendport={searchPort}
+                    onCate = {onCate}
+                    onPort = {port}
+                    onRental = {rental}
+                    // portname = {searchPort.portname}
+                    // latitude = {searchPort.latitude}
+                    // longitude = {searchPort.longitude}
+                    // portnum = {searchPort.portnum}
+                    // port_type = {searchPort.port_type}
+                    // sunscreen = {searchPort.sunscreen}
+                    // airinjector = {searchPort.airinjector}
+                    // manage_num = {searchPort.manage_num}
+                    
             />
           </Route>
           <Route path="/Login">

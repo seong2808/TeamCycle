@@ -5,43 +5,45 @@ import Map_info from "./Map_info";
 
 
 
-export default function Search({getData, searchPlace}) {
+export default function Search({getData,onCate,onPort,onRental
+   //,portname, latitude,longitude,portnum,port_type,sunscreen,airinjector,manage_num
+  }) {
 
-  const [searchcate, setSearchCate] = useState('');
+
+
+  const [searchcate, setSearchCate] = useState('전체');
   const [Place, setPlace] = useState('');
-  const [portdata, setPortdata] = useState([{
-    portname : "",
-		latitude : 0,
-		longitude : 0,
-		portnum : "",
-		port_type : "",
-		sunscreen : "",
-		airinjector : "",
-		manage_num : ""
-}]);
+  const [portdata, setPortdata] = useState({
+    // portname : portname,
+		// latitude : latitude,
+		// longitude : longitude,
+		// portnum : portnum,
+		// port_type : port_type,
+		// sunscreen : sunscreen,
+		// airinjector : airinjector,
+		// manage_num : manage_num
+  });
 
   const highFunction = (text) => {
-    console.log(text);
-    if(searchcate==='지도 검색') {
+    
+    if(searchcate==='지도 검색' || searchcate === '전체') {
       setPlace(text); 
-    } else {
+    } else if (searchcate ==='보관소 검색'){
       getData(text)
-      portFunc();
+      // portFunc(sendPort);
+      console.log("searchRe:",portdata);
+    } else if( searchcate === '대여소 검색'){
+      getData(text)
+    } else {
+      setPlace(text); 
     }
   }
 
   const onSearchcate = (text) => {
     setSearchCate(text)
-    console.log(text)
+    onCate(text)
+    console.log("cate:",searchcate)
   }
-
-  const portFunc = () => {
-    setPortdata(searchPlace)
-    console.log(portdata)
-  }
-  console.log(portdata)
-
-
 
     return (
       <div className="Search">
@@ -56,11 +58,10 @@ export default function Search({getData, searchPlace}) {
           <Mapcontainer
             style={{ width: "100%", height: "450px", zIndex: "10" }}
             searchPlace={ Place }
-            portPlace={searchPlace}
+            portPlace={ portdata }
           >
           </Mapcontainer>
           </div>
-          <Map_info />
         </div>
       </div>
     );
