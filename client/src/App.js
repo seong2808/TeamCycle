@@ -12,6 +12,7 @@ import "./css/default.css";
 import "./css/btn-search.css"
 import "./css/footer.css"
 import "./css/bikesafestyle.css"
+import "./css/safety.css"
 import Main1 from "./component/Main1";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Intro from "./component/Intro";
@@ -28,27 +29,27 @@ import Loadcert from "./component/Loadcert";
 
 
 function App() {
-
-  const [search, setSearch] = useState('');
-  const [port, setPort] = useState({
-    portname : "",
-		latitude : 37.5174,
-		longitude : 126.8653,
-		portnum : "",
-		port_type : "",
-		sunscreen : "",
-		airinjector : "",
-		manage_num : ""
-});
+  const portId = useRef(0);
+  const [port, setPort] = useState([]);
+  const [searchPort, setSearchPort] = useState([]);
 
   const getData = (search) => {
-    setSearch(search);
+    console.log("getData:",search)
+
+    if(search !== "") {
+      portNameCompare(search);
+    }
+    
   }
 
-  const compareData = () => {
-    // port.portname === search ? port.portnum
-
+  const portNameCompare = (search) => {
+    const filtered = port.filter((itemList) => {
+      return itemList.portname.includes(search)
+    })
+    setSearchPort(filtered)
+    console.log("portNameCompare:",searchPort)
   }
+
 
   const callApi = async () => {
     const response = await fetch('api/bike_port');
@@ -60,27 +61,8 @@ function App() {
     callApi()
       .then(res => setPort(res))
       .catch(err => console.log(err));
+    console.log(port)
   },[])
-
-  // const callbikeport = async()=>{
-  //   axios.get(baseUrl+'/api/bike_port').then(res => console.log(res))
-  // };
-
-  // useEffect(()=>{
-  //   awsTest()
-  //   // callbikeport();
-  // },[])
-  
-  // function awsTest(){
-  //   axios.get('/api/bike_port')
-  //   .then((response)=>{
-  //     console.log("awsTest",response);
-  //     })
-  //   .catch((error)=>{
-  //     console.log("error", error);
-  //   })
-  // }
-
   
   return (
     <BrowserRouter>
@@ -102,7 +84,7 @@ function App() {
           </Route>
           <Route path="/Search">
             <Search getData={getData}
-                    // getport={port}
+                    sendport={searchPort}
             />
           </Route>
           <Route path="/Login">
@@ -123,9 +105,7 @@ function App() {
           <Route path="/Loadcert">
             <Loadcert />
           </Route>
-
-        
-        
+       
         </Switch>
         <Footer />
       </div>

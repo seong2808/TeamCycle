@@ -64,7 +64,7 @@ export default function Main1() {
             
             <ul className="dome_list">
               <li className="dome_item">
-                <a id="dome_item_01">
+                <a id="dome_item_01" href="http://localhost:3000/LoadIntro">
                   <div className="cont">
                     <span className="iconbox">
                       <img src="./icon03.png" alt></img>
@@ -76,7 +76,7 @@ export default function Main1() {
                 </a>
               </li>
               <li className="dome_item">
-                <a id="dome_item_02">
+                <a id="dome_item_02" href="http://localhost:3000/LoadInfo">
                   <div className="cont">
                     <span className="iconbox">
                       <img src="./icon02.png" alt></img>
@@ -88,7 +88,7 @@ export default function Main1() {
                 </a>
               </li>
               <li className="dome_item">
-                <a id="dome_item_03">
+                <a id="dome_item_03" href="http://localhost:3000/LoadInfo">
                   <div className="cont">
                     <span className="iconbox">
                       <img src="./icon01.png" alt></img>
@@ -112,7 +112,7 @@ export default function Main1() {
             
             <ul className="certify_list">
               <li className="certify_item">
-                <a id="certify_item_01">
+                <a id="certify_item_01" href="http://localhost:3000/Loadcert">
                   <div className="cont">
                     인증 센터
                     <span className="iconbox">
@@ -122,7 +122,7 @@ export default function Main1() {
                 </a>
               </li>
               <li className="certify_item">
-                <a id="certify_item_02">
+                <a id="certify_item_02" href="http://localhost:3000/Loadcert">
                   <div className="cont">
                     인증 수첩
                     <span className="iconbox">

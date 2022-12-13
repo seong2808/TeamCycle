@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import Category from "./Category";
 
-
-export default function Search_Button(props) {
+export default function Search_Button({highFunction, onSearchcate}) {
 
   const [loca, setLoca] = useState('전체');
 
-  const getData = (loca) => {
-    setLoca(loca);
 
+  const getData = (text) => {
+    setLoca(text);
+    sendCate(text);
   }
 
+  const sendCate = (loca) => {
+    onSearchcate(loca)
+    console.log(loca)
+  }
 
   let [modal, setModal] = useState(false);
   const [text, setText] = useState("");
@@ -21,7 +25,7 @@ export default function Search_Button(props) {
   }
   
   const submitText = () => {
-    props.propFunction(text)
+    highFunction(text)
   }
 
 
