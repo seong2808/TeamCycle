@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Map, MapTypeId, MapMarker, ZoomControl, MapTypeControl } from "react-kakao-maps-sdk";
+import { Map, MapTypeId, MapMarker, ZoomControl, MapTypeControl, Roadview, RoadviewMarker } from "react-kakao-maps-sdk";
 
 const Mapcontainer = ({ searchPlace, portPlace }) => {
 
@@ -11,6 +11,11 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
   const [mapTypeIds, setMapTypeIds] = useState([])
 
   const mapRef = useRef()
+
+  const [center, setCenter] = useState({
+    lat: 33.450422139819736,
+    lng: 126.5709139924533,
+  })
 
   const Handler = (target, type) => {
     if (target.checked) {
@@ -24,6 +29,7 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
   }
 
     useEffect(() => {
+    
       var infowindow = new window.kakao.maps.InfoWindow({})
       if (!map) return
       const ps = new window.kakao.maps.services.Places()
@@ -122,9 +128,10 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
             {info &&info.content === marker.content && (
               <div style={{color:"#000"}}>{marker.content}</div>
             )}
+
           </MapMarker>
         ))}
-        </Map>            
+        </Map>
       </div>
       <div className="checkbox_con">
       <span>
@@ -155,6 +162,8 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
       </div>
       </span>
       </div>
+
+      
     </>
   )
 }
