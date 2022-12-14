@@ -12,11 +12,6 @@ const Mapcontainer = ({ searchPlace, portPlace }) => {
 
   const mapRef = useRef()
 
-  const [center, setCenter] = useState({
-    lat: 33.450422139819736,
-    lng: 126.5709139924533,
-  })
-
   const Handler = (target, type) => {
     if (target.checked) {
       return setMapTypeIds([...mapTypeIds, type])
