@@ -43,12 +43,6 @@ function App() {
   const getData = (search) => {
     console.log("getData:",search)
 
-    // if(search !== "" || cate === '보관소 검색'){
-    //   portNameCompare(search);
-    // } else if (search !== "" || cate === '대여소 검색'){
-    //   rentalNameCompare(search);
-    // }
-
       if(cate === '보관소 검색'){
         portNameCompare(search);
       } else if(cate === '대여소 검색'){

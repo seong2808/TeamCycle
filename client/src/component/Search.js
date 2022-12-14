@@ -5,23 +5,12 @@ import Map_info from "./Map_info";
 
 
 
-export default function Search({getData,onCate,onPort,onRental
-   //,portname, latitude,longitude,portnum,port_type,sunscreen,airinjector,manage_num
-  }) {
-
-
+export default function Search({getData,onCate,onPort,onRental}) {
 
   const [searchcate, setSearchCate] = useState('전체');
   const [Place, setPlace] = useState('');
   const [portdata, setPortdata] = useState({
-    // portname : portname,
-		// latitude : latitude,
-		// longitude : longitude,
-		// portnum : portnum,
-		// port_type : port_type,
-		// sunscreen : sunscreen,
-		// airinjector : airinjector,
-		// manage_num : manage_num
+
   });
 
   const highFunction = (text) => {
@@ -30,7 +19,6 @@ export default function Search({getData,onCate,onPort,onRental
       setPlace(text); 
     } else if (searchcate ==='보관소 검색'){
       getData(text)
-      // portFunc(sendPort);
       console.log("searchRe:",portdata);
     } else if( searchcate === '대여소 검색'){
       getData(text)
