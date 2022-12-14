@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import Category from "./Category";
+import { useHistory } from "react-router-dom";
 
 export default function Search_Button({highFunction, onSearchcate}) {
 
@@ -23,9 +24,11 @@ export default function Search_Button({highFunction, onSearchcate}) {
   const textChangeHandler = (e) => {
     setText(e.currentTarget.value);
   }
+  let history = useHistory();
   
   const submitText = () => {
     highFunction(text)
+    history.push("/Search")
   }
 
 

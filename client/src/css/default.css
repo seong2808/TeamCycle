@@ -12,8 +12,7 @@ ul, ol {
 /* Header css */
 img {
   transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .con1_space {
@@ -41,6 +40,7 @@ img {
   display: flex;
   height: 80px;
   padding: 0px 35px;
+  -webkit-box-pack: start;
   justify-content: space-between;
   vertical-align: middle;
   align-items: center;
@@ -63,8 +63,7 @@ img {
   color: rgb(23, 75, 125);
   line-height: 1;
   justify-content: center;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 .con1 .menu {
   width: 60%;
@@ -278,4 +277,31 @@ img {
   width: 100%;
   height: 300px;
   background: #4f5e8e;
+}
+
+.Category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Category h2 {
+  margin-bottom: 10%;
+}
+.Category div {
+  margin-bottom: 5%;
+}
+.Category div button {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }/*# sourceMappingURL=default.css.map */

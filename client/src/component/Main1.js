@@ -1,6 +1,9 @@
 import Search_Button from "./Search_Button";
-import React from "react";
+import React, { useState }from "react";
+import { useHistory } from "react-router-dom";
 import Slider from "react-slick";
+import Modal from "./Modal";
+import Category from "./Category";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -17,6 +20,7 @@ const SampleNextArrow = (props) => {
 
 const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
+
   return (
     <div
       className={className}
@@ -27,6 +31,29 @@ const SamplePrevArrow = (props) => {
 }
 
 export default function Main1() { 
+
+  let [modal, setModal] = useState(false);
+
+  const [text, setText] = useState("");
+
+  const [loca, setLoca] = useState('전체');
+
+  const textChangeHandler = (e) => {
+    setText(e.currentTarget.value);
+  }
+  let history = useHistory();
+  const submitText = () => {
+    // highFunction(text)
+    
+    history.push("/Search")
+  }
+
+  const onKeyPress = (e) => {
+    if(e.key == 'Enter') {
+      submitText();
+    }
+  }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -34,7 +61,7 @@ export default function Main1() {
     // 슬라이드 변경 시간
     speed: 300,
     // 자동 재생 유지 시간
-    autoplaySpeed: 7000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -51,7 +78,27 @@ export default function Main1() {
         <div className="search_text">
             <h1>자전거이용자를 위한 검색, Re-Cycle</h1>
         </div>
-        <Search_Button />
+        <div className="search_bor">
+          <button className="location" onClick={() => setModal(!modal)}>
+            <img className="loca_icon" src="./loca_icon.png"></img>
+            <div className="area">                
+              <div className="loca_info">{loca}</div>
+            </div>
+            {modal && (
+              <Modal closeModal={() => setModal(!modal)}>
+                <Category 
+                // getData={getData}
+                />
+              </Modal>
+            )}
+          </button>
+          <div className="divide_y"></div>
+          <input className="search_space" type="text" placeholder="자전거 도로 및 편의시설 검색" onChange={textChangeHandler} onKeyDown={onKeyPress}/>
+          <button className="search_button" onClick={submitText} >
+            <img src="./search_icon.png"></img>
+          </button>
+      </div>
+      
       </div>
       <div className="con3">
         <div className="bicyclepath">
